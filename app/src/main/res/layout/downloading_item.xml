@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"/>
+
+    <TextView
+        android:id="@+id/file_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/line"
+        android:maxLines="1"
+        android:textColor="#000"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:layout_above="@id/download_progress"
+        android:layout_alignRight="@id/download_progress"/>
+
+    <ProgressBar
+        android:id="@+id/download_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/file_name"
+        android:min="0"
+        android:max="100"
+        android:layout_marginRight="10dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@id/pause"/>
+
+    <ImageView
+        android:id="@+id/cancel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/cancel_download"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/file_name"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/pause"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/pause"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/download_progress"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/start"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/download_progress"
+        android:layout_marginRight="10dp"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
